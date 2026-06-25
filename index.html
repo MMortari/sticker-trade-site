@@ -1,0 +1,901 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="./support.js"></script>
+  </head>
+  <body>
+    <template id="__bundler_thumbnail" data-bg-color="#F4F1E9">
+      <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+        <g>
+          <rect
+            x="120"
+            y="120"
+            width="120"
+            height="60"
+            rx="30"
+            fill="#F26A2E"
+          />
+          <rect
+            x="260"
+            y="120"
+            width="120"
+            height="60"
+            rx="30"
+            fill="#FFC20E"
+          />
+          <rect
+            x="400"
+            y="120"
+            width="120"
+            height="60"
+            rx="30"
+            fill="#E0241B"
+          />
+          <rect
+            x="540"
+            y="120"
+            width="120"
+            height="60"
+            rx="30"
+            fill="#2BA84A"
+          />
+          <rect
+            x="680"
+            y="120"
+            width="120"
+            height="60"
+            rx="30"
+            fill="#2C5BE6"
+          />
+          <rect
+            x="820"
+            y="120"
+            width="120"
+            height="60"
+            rx="30"
+            fill="#6E4C9F"
+          />
+          <rect
+            x="960"
+            y="120"
+            width="120"
+            height="60"
+            rx="30"
+            fill="#00A19A"
+          />
+        </g>
+        <text
+          x="600"
+          y="430"
+          text-anchor="middle"
+          font-family="Archivo, sans-serif"
+          font-weight="900"
+          font-size="150"
+          fill="#111"
+          letter-spacing="-4"
+        >
+          TROCA
+        </text>
+        <text
+          x="600"
+          y="600"
+          text-anchor="middle"
+          font-family="Archivo, sans-serif"
+          font-weight="900"
+          font-size="120"
+          fill="#2BA84A"
+          letter-spacing="-4"
+        >
+          2026
+        </text>
+      </svg>
+    </template>
+    <x-dc>
+      <helmet>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Archivo+Narrow:wght@600;700&display=swap"
+          rel="stylesheet"
+        />
+        <style>
+          * {
+            box-sizing: border-box;
+          }
+          html,
+          body {
+            margin: 0;
+            padding: 0;
+          }
+          body {
+            background: #f4f1e9;
+            font-family: "Archivo", sans-serif;
+            -webkit-font-smoothing: antialiased;
+          }
+          textarea {
+            font-family: "Archivo", sans-serif;
+          }
+          textarea::placeholder {
+            color: #b9b3a4;
+          }
+          textarea:focus {
+            outline: none;
+          }
+          @keyframes popIn {
+            from {
+              opacity: 0;
+              transform: scale(0.85) translateY(4px);
+            }
+            to {
+              opacity: 1;
+              transform: scale(1) translateY(0);
+            }
+          }
+        </style>
+      </helmet>
+      <div
+        style="
+          min-height: 100vh;
+          background: #f4f1e9;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 80px;
+        "
+      >
+        <!-- scallop band -->
+        <div style="width: 100%; display: flex; height: 26px">
+          <div
+            style="flex: 1; background: #f26a2e; border-radius: 0 0 999px 999px"
+          ></div>
+          <div
+            style="flex: 1; background: #ffc20e; border-radius: 0 0 999px 999px"
+          ></div>
+          <div
+            style="flex: 1; background: #e0241b; border-radius: 0 0 999px 999px"
+          ></div>
+          <div
+            style="flex: 1; background: #2ba84a; border-radius: 0 0 999px 999px"
+          ></div>
+          <div
+            style="flex: 1; background: #00a19a; border-radius: 0 0 999px 999px"
+          ></div>
+          <div
+            style="flex: 1; background: #2c5be6; border-radius: 0 0 999px 999px"
+          ></div>
+          <div
+            style="flex: 1; background: #6e4c9f; border-radius: 0 0 999px 999px"
+          ></div>
+          <div
+            style="flex: 1; background: #f386a1; border-radius: 0 0 999px 999px"
+          ></div>
+          <div
+            style="flex: 1; background: #ffc20e; border-radius: 0 0 999px 999px"
+          ></div>
+          <div
+            style="flex: 1; background: #2ba84a; border-radius: 0 0 999px 999px"
+          ></div>
+          <div
+            style="flex: 1; background: #f26a2e; border-radius: 0 0 999px 999px"
+          ></div>
+          <div
+            style="flex: 1; background: #2c5be6; border-radius: 0 0 999px 999px"
+          ></div>
+          <div
+            style="flex: 1; background: #e0241b; border-radius: 0 0 999px 999px"
+          ></div>
+          <div
+            style="flex: 1; background: #00a19a; border-radius: 0 0 999px 999px"
+          ></div>
+        </div>
+
+        <div style="width: 100%; max-width: 980px; padding: 0 24px">
+          <!-- header -->
+          <header style="text-align: center; padding: 44px 0 36px">
+            <div
+              style="
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                background: #111;
+                color: #fff;
+                font-family: &quot;Archivo Narrow&quot;, sans-serif;
+                font-weight: 700;
+                font-size: 13px;
+                letter-spacing: 2px;
+                padding: 6px 14px;
+                border-radius: 999px;
+                text-transform: uppercase;
+              "
+            >
+              Álbum Oficial · Copa 2026
+            </div>
+            <h1
+              style="
+                margin: 18px 0 0;
+                font-weight: 900;
+                font-size: clamp(40px, 7vw, 76px);
+                line-height: 0.92;
+                letter-spacing: -2px;
+                color: #111;
+                text-transform: uppercase;
+              "
+            >
+              Troca de<br />Figurinhas
+            </h1>
+            <p
+              style="
+                margin: 16px auto 0;
+                max-width: 480px;
+                font-size: 17px;
+                line-height: 1.5;
+                color: #555;
+                font-weight: 500;
+              "
+            >
+              Cole as figurinhas que
+              <strong style="color: #111">te faltam</strong> e as
+              <strong style="color: #111">repetidas do seu amigo</strong>. A
+              gente mostra o que dá pra trocar.
+            </p>
+          </header>
+
+          <!-- two panels -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px">
+            <!-- mine -->
+            <div
+              style="
+                background: #fff;
+                border: 3px solid #111;
+                border-radius: 14px;
+                box-shadow: 6px 6px 0 #111;
+                overflow: hidden;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  padding: 14px 18px;
+                  border-bottom: 3px solid #111;
+                  background: #2c5be6;
+                "
+              >
+                <div
+                  style="
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    background: #fff;
+                  "
+                ></div>
+                <span
+                  style="
+                    font-weight: 800;
+                    font-size: 15px;
+                    letter-spacing: 0.5px;
+                    color: #fff;
+                    text-transform: uppercase;
+                  "
+                  >As que me faltam</span
+                >
+              </div>
+              <textarea
+                value="{{ missingText }}"
+                onChange="{{ onMissing }}"
+                placeholder="
+FWC: 00, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 18, 19
+CC: 1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 14
+MEX: 3, 7, 9, 11, 13, 14, 16, 17, 18, 19, 20
+RSA: 1, 6, 8, 9, 11, 12, 13, 16, 17
+KOR: 1, 4, 5, 9, 11, 13, 14, 15, 16, 18, 19, 20
+CZE: 1, 2, 4, 6, 7, 8, 9, 11, 13, 15, 16, 17, 18, 19, 20
+CAN: 1, 3, 4, 5, 7, 8, 9, 11, 12, 13, 16, 17, 18, 20
+BIH: 1, 2, 3, 5, 6, 7, 10, 13, 15, 16, 18, 19, 20
+..."
+                style="
+                  width: 100%;
+                  min-height: 240px;
+                  border: none;
+                  resize: vertical;
+                  padding: 18px;
+                  font-size: 17px;
+                  line-height: 1.7;
+                  color: #111;
+                  font-weight: 600;
+                  background: #fff;
+                "
+              ></textarea>
+              <div
+                style="
+                  padding: 8px 18px;
+                  border-top: 1px solid #eee;
+                  font-size: 12px;
+                  color: #999;
+                  font-weight: 700;
+                  text-transform: uppercase;
+                  letter-spacing: 0.5px;
+                "
+              >
+                {{ missingCount }} figurinhas
+              </div>
+            </div>
+
+            <!-- friend -->
+            <div
+              style="
+                background: #fff;
+                border: 3px solid #111;
+                border-radius: 14px;
+                box-shadow: 6px 6px 0 #111;
+                overflow: hidden;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  padding: 14px 18px;
+                  border-bottom: 3px solid #111;
+                  background: #f26a2e;
+                "
+              >
+                <div
+                  style="
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    background: #fff;
+                  "
+                ></div>
+                <span
+                  style="
+                    font-weight: 800;
+                    font-size: 15px;
+                    letter-spacing: 0.5px;
+                    color: #fff;
+                    text-transform: uppercase;
+                  "
+                  >Repetidas do amigo</span
+                >
+              </div>
+              <textarea
+                value="{{ repText }}"
+                onChange="{{ onRep }}"
+                placeholder="
+MEX: 2(1x), 6(1x), 10(2x), 15(1x)
+RSA: 5(1x), 19(3x)
+KOR: 2(1x), 3(1x)
+CAN: 2(1x), 6(2x), 10(1x), 15(1x), 19(1x)
+BIH: 8(1x), 9(1x), 12(1x), 14(1x)
+QAT: 3(1x), 12(1x)
+BRA: 12(1x), 17(1x)
+MAR: 1(3x), 3(1x), 4(1x), 8(1x), 17(1x)
+HAI: 3(1x), 4(1x), 8(1x), 16(1x), 20(1x)
+..."
+                style="
+                  width: 100%;
+                  min-height: 240px;
+                  border: none;
+                  resize: vertical;
+                  padding: 18px;
+                  font-size: 17px;
+                  line-height: 1.7;
+                  color: #111;
+                  font-weight: 600;
+                  background: #fff;
+                "
+              ></textarea>
+              <div
+                style="
+                  padding: 8px 18px;
+                  border-top: 1px solid #eee;
+                  font-size: 12px;
+                  color: #999;
+                  font-weight: 700;
+                  text-transform: uppercase;
+                  letter-spacing: 0.5px;
+                "
+              >
+                {{ repCount }} figurinhas
+              </div>
+            </div>
+          </div>
+
+          <!-- scallop divider -->
+          <div
+            style="
+              width: 100%;
+              display: flex;
+              height: 18px;
+              margin: 40px 0 28px;
+            "
+          >
+            <div
+              style="
+                flex: 1;
+                background: #ffc20e;
+                border-radius: 999px 999px 0 0;
+              "
+            ></div>
+            <div
+              style="
+                flex: 1;
+                background: #e0241b;
+                border-radius: 999px 999px 0 0;
+              "
+            ></div>
+            <div
+              style="
+                flex: 1;
+                background: #2ba84a;
+                border-radius: 999px 999px 0 0;
+              "
+            ></div>
+            <div
+              style="
+                flex: 1;
+                background: #2c5be6;
+                border-radius: 999px 999px 0 0;
+              "
+            ></div>
+            <div
+              style="
+                flex: 1;
+                background: #6e4c9f;
+                border-radius: 999px 999px 0 0;
+              "
+            ></div>
+            <div
+              style="
+                flex: 1;
+                background: #f386a1;
+                border-radius: 999px 999px 0 0;
+              "
+            ></div>
+            <div
+              style="
+                flex: 1;
+                background: #00a19a;
+                border-radius: 999px 999px 0 0;
+              "
+            ></div>
+            <div
+              style="
+                flex: 1;
+                background: #f26a2e;
+                border-radius: 999px 999px 0 0;
+              "
+            ></div>
+          </div>
+
+          <!-- results -->
+          <section>
+            <sc-if value="{{ hasMatches }}" hint-placeholder-val="{{ true }}">
+              <div>
+                <div
+                  style="
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    gap: 12px;
+                    margin-bottom: 20px;
+                  "
+                >
+                  <div>
+                    <div
+                      style="
+                        font-family: &quot;Archivo Narrow&quot;, sans-serif;
+                        font-weight: 700;
+                        font-size: 13px;
+                        letter-spacing: 2px;
+                        color: #888;
+                        text-transform: uppercase;
+                      "
+                    >
+                      Vocês podem trocar
+                    </div>
+                    <div
+                      style="display: flex; align-items: baseline; gap: 12px"
+                    >
+                      <span
+                        style="
+                          font-weight: 900;
+                          font-size: 64px;
+                          line-height: 1;
+                          color: #2ba84a;
+                          letter-spacing: -2px;
+                        "
+                        >{{ newMatchesCount }}</span
+                      >
+                      <span
+                        style="font-weight: 800; font-size: 20px; color: #111"
+                        >figurinhas</span
+                      >
+                    </div>
+                  </div>
+                  <sc-if
+                    value="{{ newMatchesCount }}"
+                    hint-placeholder-val="{{ 0 }}"
+                  >
+                    <button
+                      onClick="{{ onCopy }}"
+                      style="
+                        background: #111;
+                        color: #fff;
+                        border: none;
+                        font-family: &quot;Archivo&quot;, sans-serif;
+                        font-weight: 800;
+                        font-size: 14px;
+                        letter-spacing: 0.5px;
+                        text-transform: uppercase;
+                        padding: 12px 20px;
+                        border-radius: 999px;
+                        cursor: pointer;
+                      "
+                    >
+                      {{ copyLabel }}
+                    </button>
+                  </sc-if>
+                </div>
+
+                <sc-if
+                  value="{{ newMatchesCount }}"
+                  hint-placeholder-val="{{ 1 }}"
+                >
+                  <div
+                    style="
+                      display: flex;
+                      flex-wrap: wrap;
+                      gap: 10px;
+                      flex-direction: column;
+                      align-items: flex-start;
+                    "
+                  >
+                    <sc-for
+                      list="{{ newMatches }}"
+                      as="item"
+                      hint-placeholder-count="1"
+                    >
+                      <div
+                        style="
+                          display: flex;
+                          gap: 10px;
+                          align-items: center;
+                          flex-wrap: wrap;
+                        "
+                      >
+                        <span
+                          style="
+                            font-weight: 900;
+                            font-size: 20px;
+                            color: #111;
+                            width: 50px;
+                            display: block;
+                          "
+                          >{{ item.team }}</span
+                        >
+                        <sc-for
+                          list="{{ item.stickers }}"
+                          as="sticker"
+                          hint-placeholder-count="1"
+                        >
+                          <div
+                            style="
+                              min-width: 54px;
+                              text-align: center;
+                              background: #fff;
+                              border: 3px solid #111;
+                              border-radius: 10px;
+                              box-shadow: 3px 3px 0 #2ba84a;
+                              padding: 10px 12px;
+                            "
+                          >
+                            <span
+                              style="
+                                font-weight: 900;
+                                font-size: 20px;
+                                color: #111;
+                              "
+                              >{{ sticker }}</span
+                            >
+                          </div>
+                        </sc-for>
+                      </div>
+                    </sc-for>
+                  </div>
+                </sc-if>
+
+                <sc-if
+                  value="{{ noMatches }}"
+                  hint-placeholder-val="{{ false }}"
+                >
+                  <div
+                    style="
+                      background: #fff;
+                      border: 3px dashed #ccc;
+                      border-radius: 14px;
+                      padding: 32px;
+                      text-align: center;
+                      color: #999;
+                      font-weight: 700;
+                      font-size: 17px;
+                    "
+                  >
+                    Nenhuma figurinha em comum por enquanto. Vê com outro amigo!
+                    🙃
+                  </div>
+                </sc-if>
+
+                <!-- still missing
+                <sc-if
+                  value="{{ showStill }}"
+                  hint-placeholder-val="{{ false }}"
+                >
+                  <div style="margin-top: 36px">
+                    <div
+                      style="
+                        font-family: &quot;Archivo Narrow&quot;, sans-serif;
+                        font-weight: 700;
+                        font-size: 13px;
+                        letter-spacing: 2px;
+                        color: #888;
+                        text-transform: uppercase;
+                        margin-bottom: 14px;
+                      "
+                    >
+                      Ainda faltando · {{ stillCount }} (ele não tem)
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                      <sc-for
+                        list="{{ newMissing }}"
+                        as="item"
+                        hint-placeholder-count="5"
+                      >
+                        <div
+                          style="
+                            min-width: 48px;
+                            text-align: center;
+                            background: transparent;
+                            border: 2px solid #cfc9ba;
+                            border-radius: 8px;
+                            padding: 7px 10px;
+                          "
+                        >
+                          <span
+                            style="
+                              font-weight: 800;
+                              font-size: 16px;
+                              color: #9a9482;
+                            "
+                            >{{ item.team }}</span
+                          >
+                        </div>
+                      </sc-for>
+                    </div>
+                  </div>
+                </sc-if> -->
+              </div>
+            </sc-if>
+
+            <sc-if value="{{ empty }}" hint-placeholder-val="{{ true }}">
+              <div
+                style="
+                  background: #fff;
+                  border: 3px solid #111;
+                  border-radius: 14px;
+                  box-shadow: 6px 6px 0 #111;
+                  padding: 48px 32px;
+                  text-align: center;
+                "
+              >
+                <div style="font-size: 40px; margin-bottom: 8px">🔁</div>
+                <div
+                  style="
+                    font-weight: 800;
+                    font-size: 22px;
+                    color: #111;
+                    margin-bottom: 6px;
+                  "
+                >
+                  Preencha os dois campos
+                </div>
+                <div style="font-size: 16px; color: #777; font-weight: 500">
+                  Coloque suas faltas e as repetidas do seu amigo pra ver o que
+                  dá pra trocar.
+                </div>
+              </div>
+            </sc-if>
+          </section>
+        </div>
+      </div>
+    </x-dc>
+    <!-- type="text/x-dc" -->
+    <script
+      data-dc-script
+      data-props='{
+  "showStillMissing": { "editor": "boolean", "default": true, "tsType": "boolean" }
+}'
+    >
+      function parseMissing(text) {
+        const result = {};
+
+        for (const line of text.split("\n")) {
+          const match = line.match(/^([A-Z]+):\s*(.+)$/);
+          if (!match) continue;
+
+          const team = match[1];
+          const numbers = match[2]
+            .split(",")
+            .map((n) => parseInt(n.trim()))
+            .filter(Number.isFinite);
+          result[team] = new Set(numbers);
+        }
+
+        return result;
+      }
+
+      function parseRepeated(text) {
+        const result = {};
+
+        for (const line of text.split("\n")) {
+          const match = line.match(/^([A-Z]+):\s*(.+)$/);
+          if (!match) continue;
+
+          const team = match[1];
+          const entries = {};
+
+          for (const entry of match[2].split(",")) {
+            const m = entry.trim().match(/^(\d+)\((\d+)x\)$/);
+            if (!m) continue;
+            entries[parseInt(m[1])] = parseInt(m[2]);
+          }
+
+          result[team] = entries;
+        }
+
+        return result;
+      }
+
+      function findTradeable(missing, repeated) {
+        const tradeable = [];
+
+        for (const [team, stickers] of Object.entries(repeated)) {
+          const myMissing = missing[team];
+          if (!myMissing) continue; // seleção não está na sua lista
+
+          const matches = [];
+
+          for (const [num, qty] of Object.entries(stickers)) {
+            if (myMissing.has(parseInt(num))) {
+              matches.push({ num: parseInt(num), qty });
+            }
+          }
+
+          if (matches.length > 0) {
+            tradeable.push({ team, stickers: matches });
+          }
+        }
+
+        // ordena por quem tem mais figurinhas úteis pra você
+        tradeable.sort((a, b) => b.stickers.length - a.stickers.length);
+
+        return tradeable;
+      }
+
+      class Component extends DCLogic {
+        state = { missingText: "", repText: "", copied: false };
+
+        parse(text) {
+          if (!text) return [];
+          const tokens = String(text)
+            .split(/[^A-Za-z0-9]+/)
+            .filter(Boolean);
+          const seen = new Set();
+          const out = [];
+          for (const t of tokens) {
+            const k = t.toUpperCase();
+            if (!seen.has(k)) {
+              seen.add(k);
+              out.push(k);
+            }
+          }
+          return out;
+        }
+
+        sortStickers(arr) {
+          return arr.slice().sort((a, b) => {
+            const na = parseInt(a, 10),
+              nb = parseInt(b, 10);
+            const aNum = /^\d+$/.test(a),
+              bNum = /^\d+$/.test(b);
+            if (aNum && bNum) return na - nb;
+            if (aNum) return -1;
+            if (bNum) return 1;
+            return a.localeCompare(b);
+          });
+        }
+
+        getSticker(missing, rep) {
+          const result = findTradeable(missing, rep);
+
+          const response = [];
+
+          result.forEach((item) => {
+            response.push({
+              team: item.team,
+              stickers: item.stickers.map(
+                (s) => `#${s.num}`,
+                // (s) => `#${s.num}${s.qty > 1 ? ` ×${s.qty}` : ""}`,
+              ),
+            });
+          });
+
+          return response;
+        }
+
+        renderVals() {
+          const showStillPref = this.props.showStillMissing ?? true;
+
+          const missing = parseMissing(this.state.missingText || "");
+          const repeated = parseRepeated(this.state.repText || "");
+
+          const missingCount = Object.entries(missing).reduce(
+            (prev, [, curr]) => prev + curr.size,
+            0,
+          );
+          const repCount = Object.entries(repeated).reduce(
+            (prev, [, curr]) =>
+              prev + Object.values(curr).reduce((p, c) => p + c, 0),
+            0,
+          );
+
+          const empty = missingCount == 0 || repCount == 0;
+
+          const newMatches = this.getSticker(missing, repeated);
+          const newMatchesCount = newMatches.reduce(
+            (prev, curr) => prev + curr.stickers.length,
+            0,
+          );
+          const hasBoth = false;
+
+          const values = {
+            missingText: this.state.missingText,
+            repText: this.state.repText,
+            onMissing: (e) =>
+              this.setState({ missingText: e.target.value, copied: false }),
+            onRep: (e) =>
+              this.setState({ repText: e.target.value, copied: false }),
+            missingCount,
+            repCount,
+            hasMatches: newMatchesCount > 0,
+            newMatches,
+            newMatchesCount,
+            hasBoth,
+            empty,
+            noMatches: newMatchesCount === 0,
+            showStill: false,
+            copyLabel: this.state.copied ? "Copiado!" : "Copiar lista",
+            onCopy: () => {
+              let txt = "";
+              newMatches.forEach((item) => {
+                txt += item.team + `: ` + item.stickers.join(", ") + "\n";
+              });
+              try {
+                navigator.clipboard.writeText(txt);
+              } catch (e) {}
+              this.setState({ copied: true });
+              setTimeout(() => this.setState({ copied: false }), 1800);
+            },
+          };
+          return values;
+        }
+      }
+    </script>
+  </body>
+</html>
